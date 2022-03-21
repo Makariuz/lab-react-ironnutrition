@@ -20,9 +20,9 @@ export function Search({id, food, setFood}){
     const handleSearch = (e) => {
         setSearch(e.target.value)
         setFood((previousFood) => {
-            // return the new array or filtered tweets
+ 
             return previousFood.filter((food) => {
-              // a tweet is gonna stay in the array if its id is different from the the id of the curretn tweet
+             
              return  food.name.toLowerCase().includes(e.target.value) ? food.name : ''
         });
           });

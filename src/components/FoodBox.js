@@ -1,7 +1,7 @@
 import { Card, Row, Col, Divider, Input, Button } from 'antd';
 
-export function FoodBox({food, setFood}){
- 
+export function FoodBox({id, food, setFood}){
+
     const handleDelete = () => {
         setFood((previousFood) => {
           return previousFood.filter((f) => f.name !== food.name)
@@ -9,7 +9,7 @@ export function FoodBox({food, setFood}){
       }
     return (
     
-        <div>   
+        <div key={id} >   
         <Card>
             <h2>{food.name}</h2>
         </Card>
